@@ -1,6 +1,6 @@
 name: Build linux-64-gmod artifact
 
-on: [workflow_dispatch]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build-linux-gmod64:
@@ -17,7 +17,7 @@ jobs:
     - name: Checkout Mini Source SDK
       uses: actions/checkout@v6
       with:
-        repository: misyltoad/mini-source-sdk
+        repository: luisgamercool-oss/mini-source-sdk
 
     - name: Checkout VPhysics Jolt
       uses: actions/checkout@v6
